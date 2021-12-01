@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	// Indien je * / of - doet zal JavaScript automatisch de string omzetten naar een getal.
+
+	let getal = prompt("Hoeveel is de prijs?");
+	console.log(typeof getal);
+	let aantal = prompt("Hoeveel stuks?");
+	let totaal = getal * aantal;
+	document.write(`De prijs is: ${getal}€. Je hebt ${aantal} stuks gekocht. De totale prijs is: ${totaal}. `);
+	// De prijs is: 20€. Je hebt 2 stuks gekocht. De totale prijs is: 40. 
+
+
+	// Maar voor een optelling zal JavaScript de 2 waardes na elkaar plaatsen en niet optellen:
+
+	let getal1 = prompt("Geef het eerste getal:");
+	let getal2 = prompt("Geef het tweede getal:");
+	let totaal = getal1 + getal2;
+	document.write(`Het eerste getal is : ${getal1}. Het tweede getal is : ${getal2}. Samen is dit: ${totaal}. `);
+	// Het eerste getal is : 20. Het tweede getal is : 10. Samen is dit: 2010.
+
+
+	// Nu moet de invoer omgezet worden naar een getal met parseInt()
+	let getal1 = prompt("Geef het eerste getal:");
+	let getal2 = prompt("Geef het tweede getal:");
+	let totaal = parseInt(getal1) + parseInt(getal2);
+	document.write(`Het eerste getal is : ${getal1}. Het tweede getal is : ${getal2}. Samen is dit: ${totaal}. `);
+	// Het eerste getal is : 20. Het tweede getal is : 10. Samen is dit: 30.
+
+
+	// Het zelfde geld ook voor floats met parseFloat()
+	let getal1 = prompt("Geef het eerste getal:");
+	let getal2 = prompt("Geef het tweede getal:");
+	let totaal = parseFloat(getal1) + parseFloat(getal2);
+	document.write(`Het eerste getal is : ${getal1}. Het tweede getal is : ${getal2}. Samen is dit: ${totaal}. `);
+	// Het eerste getal is : 2.457. Het tweede getal is : 54.18. Samen is dit: 56.637. 
+
+
+	// Om instellen hoeveel cijfers na de komma gebruiken we .toFixed(x) X geeft aan hoeveel cijfers na de komma.
+
+	// OPGELET: Hierdoor wordt het GETAL omgezet naar een STRING!
+
+	 let getal1 = 3.1415;
+	document.write(`Het eerste getal is : ${getal1.toFixed(2)}. Het type van getal1 is: ${typeof getal1}, maar het type van getal1.toFixed(2) is: ${typeof getal1.toFixed(2)}`);
+	// Het eerste getal is : 3.14. Het type van getal1 is: number, maar het type van getal1.toFixed(2) is: string 
+
+	// Dus om dit optelossen zet het geheel (var.tofixed()) in een parseFloat()
+	document.write(`<p>${parseFloat(getal1.toFixed(2)) + 10} </p>`);
+
+
+
+	// Undefined. De variable is niet gedefineerd, heeft geen inhoud
+	let getal1;
+	document.write(`Het eerste getal is : ${getal1}.`);
+	// Het eerste getal is : undefined.
+
+
+
+	/* Null: een null waarde betekent ook dat een variabele geen waarde heeft, maar in dit geval is die het gevolg van een opdracht
+
+	bv. indien je op annuleren klikt bij een prompt: */
+	let getal1 = prompt("Geef het getal:");
+	document.write(`Het getal is : ${getal1}.`);
+	// Het getal is : null. 
+	// Meestal wordt dit gebruikt door programmeurs om een variabele aan te passen naar : deze variabele bevat nu geen waarde meer
+
+
+
+	// NaN: Not a Number is een foutmelding die JavaScript toont indien je iets wil berekenen met een variabele die geen nummer bevat
+	let getal1 = "vijf";
+	let uitkomst = 5 * getal1;
+	document.write(`De uitkomst is: ${uitkomst}.`);
+	// De uitkomst is: NaN
+
+
+	// isNaN() Hiermee kan je zelf controleren of een variable een nummer is of niet.
+	let getal1 = "vijf";
+	let getal2 = 5;
+	document.write(`<p>getal1 is geen nummer: ${isNaN(getal1)}.</p > `);
+	document.write(`<p> getal2 is geen nummer: ${isNaN(getal2)}.</p>`);	
+	// getal1 is geen nummer: true.
+	// getal2 is geen nummer: false.
+
+</script>
+
+</body>
+</html>

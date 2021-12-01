@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+	let fles = "water";
+
+	function grenadineToevoegen(opvangContainer) {
+	    document.write(`<p>Grenadine is toegevoegd aan ${opvangContainer}</p>`);
+	}
+
+	grenadineToevoegen(fles);
+
+	// Grenadine is toegevoegd aan water
+
+	// We kunnen nu de functie hergebruiken en telkens andere zaken doorgeven
+
+	let glas = "bier";
+	grenadineToevoegen(glas);
+
+
+	// hier wordt geen variabele gebruikt, maar wordt tekst rechtstreeks doorgegeven aan de functie
+
+	function groet(naamPersoon) {
+	   document.write(`<p>Goedendag ${naamPersoon}</p>`);
+	}
+
+	groet("Fred");
+	groet("Ethel");
+
+
+	
+</script>
+
+</body>
+</html>

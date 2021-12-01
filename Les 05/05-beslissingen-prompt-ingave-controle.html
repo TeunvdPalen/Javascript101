@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	/*
+	let naam = prompt("Geef je naam in ajb :");
+	if (naam == null) {
+	    document.write("u heeft geannuleerd!");
+	}
+	else if (naam.length == 0) {
+	    document.write("u heeft niets ingegeven !");
+	}
+	else {
+	document.write(`Hallo ${naam}! Hoe is het ermee?`);
+	}
+	*/
+
+	// ---
+
+	let pensioen = prompt("Wanneer ga je op pensioen?")
+	let jaartal = new Date().getFullYear()  // returns the current year
+
+	if (pensioen == null) {
+		document.write(`<p>U heeft geannuleerd!</p>`)
+	}
+	else if (pensioen == 0) {
+		document.write(`<p>U heeft niks ingegeven!</p>`)
+	}
+	else if (isNaN(pensioen)) {
+		document.write(`<p>U heeft geen nummer in ingegeven!</p>`)
+	}
+	else if (pensioen.length !== 4) {
+		document.write(`<p>Geef een jaartal in met 4 cijfers</p>`)
+	}
+	else if (pensioen < jaartal) {
+		document.write(`<p>Ben je al op pensieoen dan?</p>`)
+	}
+	else {
+		document.write(`<p>Je gaat op pensioen binnen ${parseInt(pensioen)-jaartal} jaar.</p>`)
+	}
+	
+
+</script>
+
+</body>
+</html>

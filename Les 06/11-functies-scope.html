@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	
+	<script type="text/javascript">
+	
+	// Global scope
+
+	//Variabelen bestaan in hele script en voor elk script in webpagina. Blijven ook bestaan zolang pagina op scherm staat
+	//Kan overvloed van (overbodige) variabelen geven en script log maken
+
+
+	// Function scope (ES5)
+	// - variabele die gedefinieerd is in het hoofdscript kan je overal gebruiken
+	// - variabele die gedefinieerd is in een function, kan enkel gebruikt worden in de function waarin die gedefinieerd is
+
+	// vb.
+	function mijnFunctie() {
+		var naam = 'Luke'
+		console.log(naam); // 'Luke'
+	}
+
+	mijnFunctie();
+	console.log(naam); // naam is not defined
+
+
+	// Block scope (ES6)
+	// block: alles wat gebruik maakt van {}, dus functies, maar ook bv. een if, for,...
+	// variabelen gedefinieerd in een block bestaan enkel in die block
+
+	// vb.
+	let getal = 5;
+	if (getal == 5) {
+		let naam2 = 'Luke'; //naam2 is aangemaakt in if block
+		console.log(naam2);
+	}
+
+	console.log(naam2); //naam2 is not defined
+
+
+</script>
+
+</body>
+</html>

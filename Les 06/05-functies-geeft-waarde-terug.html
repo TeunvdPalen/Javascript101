@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+	const tekstvariabele = "0123456789";
+	document.write(`<p>substring(4,9) van de tekst '${tekstvariabele}' is : ${tekstvariabele.substring(4, 9)} </p>`);
+
+
+	// Functie met input en ouput
+	function verdubbelen(input) {
+	    let output = input * 2;
+	    return output;
+	}
+
+	let getal = 5;
+	let uitkomst = verdubbelen(getal);
+	document.write(`<p>${getal} geeft ${uitkomst} na verdubbelen<p/>`);
+
+
+	// Gemiddelde
+	function gemiddelde(nr1, nr2, nr3, nr4) {
+	   let resultaat = (nr1 + nr2 + nr3 + nr4) / 4;
+	   return resultaat;
+	}
+
+	let score = gemiddelde(3, 4, 5, 6);
+	document.write(`<p>Het gemiddelde is : ${score}<p/>`)
+
+</script>
+
+</body>
+</html>

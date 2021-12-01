@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	/* Substring geeft een nieuwe string opgehaal uit een oorspronglijke string
+
+	.substring(start,end)  tussen de haakjes definieer je indexen: startindex en eindindex
+	
+	- index begint te tellen vanaf 0
+	- end index is niet inclusief, dus teken dat staat op  eindindex wordt niet opgenomen
+	
+	opmerking: volgorde van start en end is onbelangrijk, het kleinste getal wordt als start genomen
+	.substring(4,9) is hetzelfde als .substring(9,4)
+	*/
+	let tekstvariabele = "0123456789";
+document.write(`<p>substring(4,9) van de tekst '${tekstvariabele}' is : ${tekstvariabele.substring(4,9)} </p>`);
+
+
+	// 1 enkel teken bekomen doen we met .charAt()
+	let alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	document.write(`alfabet : ${alfabet}`);
+
+    document.write(`<p>${alfabet.charAt(0)}</p>`);
+	document.write(`<p>${alfabet.charAt(12)}</p>`);
+	document.write(`<p>${alfabet.charAt(25)}</p>`);
+	document.write(`<p>${alfabet.charAt(27)}</p>`);
+
+	/* Zoeken naar een substring doen we met .indexOf()
+	 geeft als resultaat index waar gezochte string begint
+	- begint te tellen vanaf 0
+	- indien niet gevonden is het resultaat -1
+	- hoofdletter gevoelig
+	*/
+	let alfabet1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	let locatie = alfabet1.indexOf("CDE");
+	document.write(`"CDE" begint in alfabet op locatie: ${locatie}`);
+	// "CDE" begint in alfabet op locatie: 2 
+
+	let fouteLocatie = alfabet1.indexOf("smurf");
+	document.write(`<p>"smurf" begint in het alfabet op index: ${fouteLocatie}</p>`);
+	// "smurf" begint in het alfabet op index: -1
+
+
+	// indexOf() - startIndex  Aangeven vanaf welke positie het zoeken moet starten
+	// .indexOf(searchvalue,startIndex)
+	let tekst1 = "De kat krabt de krollen van de trap.";
+	let locatie1 = tekst1.indexOf("de", 15);
+	document.write(`"de" staat in de tekst, gezocht vanaf positie 15, op positie: ${locatie1}`);
+	// "de" staat in de tekst, gezocht vanaf positie 15, op positie: 28 
+
+
+	// .lastIndexOf() wordt gebruikt om te zoeken vanaf achteraan de doorzochte string
+	let tekst2 = "Fred Flintstone was de dansleraar van Fred Astaire";
+	let locatie2 = tekst2.lastIndexOf("Fred");
+	document.write(`<p>Het laatste voorkomen van Fred in : "${tekst2}" is : ${locatie2}`);
+	// Het laatste voorkomen van Fred in : Fred Flintstone was de dansleraar van Fred Astaire is : 38
+
+</script>
+
+</body>
+</html>

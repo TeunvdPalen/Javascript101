@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+	function product(nr1, nr2, nr3) {
+		let output = nr1*nr2*nr3;
+		return output;
+	}
+
+	let uitkomst = product(2,3,5)
+	document.write(`<p>De uitkomst is ${uitkomst}</p>`)
+	console.log(uitkomst.typeOf)
+
+	// ---
+
+	let namen = ["Jan", "Piet", "Joris"];
+
+	function sorteerOmgekeerdJoin(doorgeven) {
+		return doorgeven.sort().reverse().join("-");
+	}
+
+	let draai = sorteerOmgekeerdJoin(namen);
+	document.write(`<p>De array omgedraaid gesorteerd en gejoined geeft: ${draai}</p>`);
+
+	// ---
+
+	let getal1 = prompt("Vul ier het eerste getal in.")
+	let getal2 = prompt("Vul hier het tweede getal in.")
+	
+	function vergelijken() {
+		if (getal1 < getal2) {
+			return "kleiner dan"
+		}
+		else if (getal1 == getal2) {
+			return "gelijk aan"
+		}
+		else if (getal1 > getal2) {
+			return "groter dan"
+		}
+	}
+
+	let verhouding = vergelijken(getal1, getal2);
+	document.write(`<p>${getal1} is ${verhouding} ${getal2}</p>`)
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	var tekst = "JavaScript";
+	document.write(`<p>${tekst.substring(0,1)}${tekst.substring(2,3)}${tekst.substring(4,7)}${tekst.substring(8,10)}</p>`);
+
+	document.write(`<p>${tekst.charAt(1)}${tekst.charAt(3)}${tekst.charAt(7)}</p>`);
+
+	document.write(`<p>${tekst.indexOf("a")}</p><p>${tekst.indexOf("A")}</p>`);
+
+	let zin = "dit is een voorbeeldzin";
+	document.write(`<p>De tekst is nu : "${zin.substring(0, 1).toUpperCase()}${zin.substring(1, zin.length)}."</p>`);
+</script>
+
+</body>
+</html>

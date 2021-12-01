@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	let punten = prompt("Geef het aantal punten in met 2 cijfers")
+
+	if (punten == null) {
+		document.write(`<p>U heeft geannulleerd!</p>`)
+	}
+	else if (punten == 0) {
+		document.write(`<p>U heeft niks ingegeven!</p>`)
+	}
+	else if (isNaN(punten)) {
+		document.write(`<p>U heeft geen nummer ingegeven!</p>`)
+	}
+	else if (punten.length !== 2) {
+		document.write(`<p>Geef de punten in met cijfers!</p>`)
+	}
+	else if (punten >= 95) {
+		document.write(`<p>De graad is: A+</p>`)
+	}
+	else if (punten >= 90) {
+		document.write(`<p>De graad is: A</p>`)
+	}
+	else if (punten >= 80) {
+		document.write(`<p>De graad is: B</p>`)
+	}
+	else if (punten >= 70) {
+		document.write(`<p>De graad is: C</p>`)
+	}
+	else if (punten >= 60) {
+		document.write(`<p>De graad is: D</p>`)
+	}
+	else if (punten >= 50) {
+		document.write(`<p>De graad is: E</p>`)
+	}
+	else if (punten < 50) {
+		document.write(`<p>De graad is: F</p>`)
+	}
+</script>
+
+</body>
+</html>

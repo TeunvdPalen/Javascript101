@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+         "use strict";
+
+         let hoofdscript = () => {
+            let getallen = [];
+            let aantal = prompt("Hoeveel getallen wilt u ingeven?");
+            controleAantal(aantal);
+            if (aantal > 0) {
+               for (let i = 0; i < aantal; i++) {
+                  getallen.push(
+                     controleGetal(prompt(`Geef getal ${i + 1} in`))
+                  );
+               }
+            }
+            document.write(getallen);
+         };
+
+         let controleAantal = (argument) => {
+            if (argument == null) {
+               document.write("Er is genannuleerd.");
+            } else if (argument == 0) {
+               document.write("Er is niets ingegeven.");
+            } else if (isNaN(argument) == false) {
+               return argument;
+            } else {
+               document.write("Dit is geen corrcete ingave.");
+            }
+         };
+
+         let controleGetal = (argument2) => {
+            if (argument2 == null || argument2 == 0 || isNaN(argument2)) {
+               return "fout";
+            } else {
+               return argument2;
+            }
+         };
+
+         hoofdscript();
+      </script>
+   </body>
+</html>

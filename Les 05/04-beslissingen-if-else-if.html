@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	let getal = 5;
+
+	if (getal < 5) {
+	    document.write('Het getal is kleiner dan 5.');
+	} else if (getal === 5) {
+	    document.write('Het getal is exact 5.');
+	} else {
+	    document.write('Het getal is groter dan 5.');
+	}
+
+	// ---
+
+	let ouderdom = prompt("Wat is je leeftijd?")
+
+	if (ouderdom < 18) {
+		document.write(`<p>Je krijgt een watertje</p>`)
+	}
+	else if (ouderdom >= 18) {
+		document.write(`<p>Een pintje?</p>`)
+	}
+	else {
+		document.write(`<p>Je hebt iets verkeerd ingegeven.</p>`)
+	}
+
+	// ---
+
+	let tijd = prompt("Hoelaat is het nu?")
+	if (tijd > 0 && tijd <= 7) {
+		document.write(`<p>Goeienacht</p>`)
+	}
+	else if (tijd > 7 && tijd <= 11) {
+		document.write(`<p>Goeiemorgen</p>`)
+	}
+	else if (tijd > 11 && tijd <= 18) {
+		document.write(`<p>Goeimiddag</p>`)
+	}
+	else {
+		document.write(`<p>Goeie avond</p>`)
+	}
+
+</script>
+
+</body>
+</html>

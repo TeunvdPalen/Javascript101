@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+	function eersteCharacter(vakNaam) {
+		document.write(`<p>Het eerste karakter uit ${vakNaam} is: ${vakNaam.charAt(0)}</p>`);
+	}
+
+	eersteCharacter("Javascript");
+	eersteCharacter("html");
+	eersteCharacter("css");
+
+	// ---
+
+	function hoofdletters(tekst) {
+		document.write(`<p>${tekst.toUpperCase()}</p>`)
+	}
+
+	hoofdletters("javascript");
+	hoofdletters("css");
+
+	// ---
+
+	let namen = ["Jan", "Piet", "Joris"];
+
+	function toonArray(ontvangen) {
+		document.write(`<p>${ontvangen}</p>`);
+	}
+
+	toonArray(namen);
+
+	// ---
+
+	let dieren = ["hond", "kat", "paard"];
+
+	function toonEersteElementenUitArray(ontvangen) {
+		document.write(`<p>${ontvangen[0]}</p>`);
+	}
+	
+	toonEersteElementenUitArray(namen)
+	toonEersteElementenUitArray(dieren)
+
+	// ---
+
+	function schrijf(ontvangen) {
+		document.write(`<p>${ontvangen}</p>`);
+	}
+
+	schrijf("Nu moet ik niet zoveel code meer intikken");
+
+</script>
+
+</body>
+</html>

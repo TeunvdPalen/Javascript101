@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	let scores = ["5641", "684", "6843", "5", "1397", "8416"]
+	let grootsteGetal = scores[0]
+
+	for (let i = 0; i < scores.length; i++) {
+		if (grootsteGetal < scores[i+1]) {
+			grootsteGetal = scores[i+1]
+		}
+	}
+
+	document.write(`<p>Het grootste getal:${grootsteGetal} staat in de array op de plaats ${scores.indexOf(grootsteGetal)}</p>`)
+		
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	
+	<script type="text/javascript">
+	
+	// Argumenten en Return
+
+	// standaard code
+	function verdubbelen(input) {
+	    let output = input * 2;
+	    return output;
+	}
+
+	let getal = 5;
+	let uitkomst = verdubbelen(getal);
+	document.write(`<p>${getal} geeft ${uitkomst} na verdubbelen<p/>`);
+
+
+	// Indien er enkel een return gebeurd, mag je ook het woordje return weglaten
+	//argumenten die doorgegeven worden komen nog altijd binnen de eerste ()
+	let verdubbelen2 = (input) => input * 2;
+
+	let getal2 = 5;
+	let uitkomst2 = verdubbelen2(getal2);
+	document.write(`<p>${getal2} geeft ${uitkomst2} na verdubbelen<p/>`);
+
+
+	// Indien er maar 1 argument wordt doorgeven, mag je de () laten vallen
+	let verdubbelen3 = input => input * 2;
+
+	let getal3 = 5
+	let uitkomst3 = verdubbelen2(getal2);
+	document.write(`<p>${getal3} geeft ${uitkomst3} na verdubbelen<p/>`);
+	
+	// Gebruik: enkel bij eenvoudige functies!
+	// Er zijn beperkingen, maar die worden pas duidelijk als we meer geavanceerde code gaan gebruiken.
+
+</script>
+
+</body>
+</html>

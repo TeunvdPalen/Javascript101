@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<button onclick="vraagNaam()">Klik mij</button>
+
+	<script type="text/javascript">
+	
+	// Functie expressie
+	// De functie wordt onderdeel van een expressie concreet houd dit in dat
+	// de functie wordt toegewezen aan een variable
+	// wordt gebruikt o.a. in arroa functtions
+
+	let vraagNaam = function () {
+	    let naam = prompt('Wat is je naam?');
+	    document.write(`Hallo ${naam}!`);
+	}
+
+
+	// Nieuwe manier om funcites te gebruiken
+	// Worden ookf FAT ARROW genoemed
+	// =>
+
+	// het woordje "function" valt weg en in de plaats wordt enkel () gezet
+	// met eventueel het argument daarin
+	// gevold door => om aan te geven dat je een functie defineert
+
+	function groet() {
+	    document.write("<p>Goedendag</p>");
+	}
+	groet();
+
+	// vvvvv
+
+	let groet2 = () => {
+	    document.write("<p>Goedendag2</p>");
+	}
+	groet2();
+
+	// Indien de functie maar 1 opdracht bevat mag je de {} weglaten
+	
+	let groet3 = () => document.write("<p>Goedendag3</p>");
+	groet3();
+
+	
+
+</script>
+
+</body>
+</html>

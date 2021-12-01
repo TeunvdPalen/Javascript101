@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+	
+	function hoofdscript() {
+		let voornaam = controle(prompt("Geef hier je voornaam in."));
+		if (fout == true) {
+			document.write(`<p>${error}</p>`)
+		}
+		else {
+			let achternaam  = controle(prompt("Geef hier je achternaam in."));
+			if (fout == false) {
+				document.write(`<p>"Hey ${voornaam} ${achternaam}</p>`)
+			}
+			else if (fout == true) {
+				document.write(`<p>${error}</p>`)
+			}
+		}
+	}
+
+	function controle(argument) {
+		if (argument == null) {
+			fout = true;
+			return error = "Er is genannuleerd."
+		}
+		else if (argument == 0) {
+			fout = true;
+			return error = "Er is niets ingegeven."
+		}
+		else if (argument.length < 2) {
+			fout = true;
+			return error = "Er zijn minder dan 2 karakters ingegeven."
+		}
+		else {
+			fout = false;
+			return argument;
+		}
+	}
+
+	hoofdscript();
+
+
+</script>
+
+</body>
+</html>
