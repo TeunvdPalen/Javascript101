@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	
+	let namen = ["Jan", "Piet", "Joris"];
+	document.write(`<p>${namen}</p>`);
+
+
+	let week = ["Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag","Zondag"];
+	document.write(`<p>${week}</p>`);
+
+
+	// Length geeft aan hoevel elementen er zitten in een array
+	let scores = [12, 14, 21];
+	document.write(scores.length);
+	// Resultaat: 3
+
+
+	// Data opvragen uit een array doen we met naamArray[index]  de index begint van af 0
+	let afmeting = [20, 33, 40];
+	let getal1 = afmeting[0];
+	let getal2 = afmeting[1];
+	document.write(`<p>${getal1} ${getal2} ${afmeting[2]}</p>`);
+
+	// Iets toevoegen aan een array gebeurt met push()
+	let scores2 = [5, 14, 18];
+	scores2.push(20);
+	document.write(`<p>${scores2}</p>`);
+	// 5,14,18,20
+
+
+	let htmlTags = ["html","p","div"];
+	document.write(`<p>${htmlTags}</p>`);
+	let extra = prompt("Ken je nog een extra tag?", "h1");
+	htmlTags.push(extra);
+	document.write(`<p>${htmlTags}</p>`);
+
+
+	//Bewerking op elementen van een array
+	let namen2 = ["Jan Jansen", "Piet Peters"];
+
+	// 1 element aanspreken en daar een substring op toepassen:
+	let voornaam1 = namen2[0].substring(0, 3);
+	document.write(voornaam1);
+	// Jan
+
+
+	// Splitsen van een string naar een array
+	let naam = "Jan Jansen";
+	// voorzie een variable om het reultaat in te bewaren
+	let arryVanNaam;
+	// Bepaal een teken dat dienst doet als "deler", bv. een spatie
+	let arrayVanNaam = naam.split(" ");
+	document.write(`<p>${arrayVanNaam}</p>`);
+	document.write(`<p>${arrayVanNaam.length}</p>`);
+	// Jan,Jansen
+	// 2
+
+
+	let java = "JavaScript is een scriptingtaal"
+	let arrayJava = java.split(" ")
+	document.write(`<p>${arrayJava}</p>`);
+	document.write(`<p>${arrayJava.length}</p>`);
+
+</script>
+
+</body>
+</html>
