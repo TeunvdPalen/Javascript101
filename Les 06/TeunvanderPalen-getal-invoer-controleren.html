@@ -23,7 +23,7 @@
             document.write(getallen);
          };
 
-         let controleAantal = (argument) => {
+         let controleAantal = argument => {
             if (argument == null) {
                document.write("Er is genannuleerd.");
             } else if (argument == 0) {
@@ -35,7 +35,7 @@
             }
          };
 
-         let controleGetal = (argument2) => {
+         let controleGetal = argument2 => {
             if (argument2 == null || argument2 == 0 || isNaN(argument2)) {
                return "fout";
             } else {
