@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // Datum checker
+         // ^(\d|[0-2]\d|3[0-1])\/(\d|0[1-9]|1[0-2])\/(\d{4}|\d{2})$
+
+         // Manier om Reguliere expressie te schrijven
+         let re1 = new RegExp("abc");
+
+         of;
+
+         let re2 = /abc/;
+
+         // Kijken of het klopt
+         console.log(re2.test("abcde")); //true
+
+         // Search()
+         // Vergelijkbaar met indexOf()
+         //Geef positie aan van eerste voorkomen van de te zoeken expressie
+         // of -1 als het niet gevonden wordt
+
+         let tekst = "Deze tekst bevat spaties.";
+         console.log(tekst.search(/\s/)); // 4
+
+         console.log(tekst.search(/zzz/)); // -1
+
+
+         
+      </script>
+   </body>
+</html>
