@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Formulier</title>
+      <style type="text/css">
+         .error {
+            color: red;
+         }
+
+         label {
+            display: inline-block;
+            text-align: right;
+            width: 200px;
+         }
+      </style>
+   </head>
+   <body>
+      <form id="formulier">
+         <p>
+            <label for="voornaam">Voornaam:</label>
+            <input type="text" id="voornaam" />
+            <span class="error" id="voornaam_error"></span>
+         </p>
+         <p>
+            <label for="achternaam">Achternaam:</label>
+            <input type="text" id="achternaam" />
+            <span class="error" id="achternaam_error"> </span>
+         </p>
+         <p>
+            <label for="straatnaam">Straatnaam:</label>
+            <input type="text" id="straatnaam" />
+            <span class="error" id="straatnaam_error"> </span>
+         </p>
+         <p>
+            <input
+               type="button"
+               value="Verstuur"
+               id="knop_verstuur"
+               onclick="verstuur()"
+            />
+         </p>
+         
+      </form>
+
+      <script type="text/javascript">
+         "use strict";
+         let voornaamTxt;
+         let achternaamTxt;
+         let straatnaamTxt;
+         let allesCorrectIngevuld = true;
+         //var die bijhoudt of er ergens een fout is of niet
+
+         function verstuur() {
+            voornaamTxt = document.getElementById("voornaam").value;
+            achternaamTxt = document.getElementById("achternaam").value;
+            straatnaamTxt = document.getElementById("straatnaam").value;
+            //Via JS vraag je het element uit de webpagina op met de id voornaam. Van dat element vraag je de value op, de inhoud
+            allesCorrectIngevuld = true;
+            //als er op de knop geklikt wordt, moet het bijhouden van de fouten gereset worden
+
+            //controle voornaam ingevuld
+            if (voornaamTxt.length == 0) {
+               document.getElementById("voornaam_error").innerHTML =
+                  "Vul in a.u.b.";
+               allesCorrectIngevuld = false;
+            } else {
+               //aparte functie aanmaken om de voorwaarden te controleren
+               controleerVoorwaardenVoornaam();
+            }
+
+            //controle achternaam ingevuld
+            if(achternaamTxt.length==0){
+            document.getElementById("achternaam_error").innerHTML="Vul in a.u.b.";
+                allesCorrectIngevuld = false;
+            }
+            else{
+                controleerVoorwaardenAchternaam();
+            }
+
+            //controle straatnaam ingevuld
+            if(straatnaamTxt.length==0){
+            document.getElementById("straatnaam_error").innerHTML="Vul in a.u.b.";
+                allesCorrectIngevuld = false;
+            }
+            else{
+                controleerVoorwaardenStraatnaam();
+            }
+
+            //uiteindelijk controleren of alles correct is
+            //deze if blijft altijd allerlaatst in de verstuur() functie
+            if (allesCorrectIngevuld) {
+               document.write("Naam is correct ingevuld");
+            }
+         } //einde verstuur()
+
+         function controleerVoorwaardenVoornaam() {
+            if (voornaamTxt.length < 2) {
+               document.getElementById("voornaam_error").innerHTML =
+                  "Minstens 2 karakters lang!";
+               allesCorrectIngevuld = false;
+            } else {
+               document.getElementById("voornaam_error").innerHTML = "";
+            }
+         }
+
+         function controleerVoorwaardenAchternaam(){
+            if(achternaamTxt.length < 2 ){
+            document.getElementById("achternaam_error").innerHTML="Minstens 2 karakters lang!";
+            allesCorrectIngevuld = false;
+            }
+            else{
+            document.getElementById("achternaam_error").innerHTML="";
+            }
+        }
+
+        function controleerVoorwaardenStraatnaam(){
+            if(straatnaamTxt.length < 2 ){
+            document.getElementById("straatnaam_error").innerHTML="Minstens 2 karakters lang!";
+            allesCorrectIngevuld = false;
+            }
+            else{
+            document.getElementById("straatnaam_error").innerHTML="";
+            }
+        }
+      </script>
+   </body>
+</html>
